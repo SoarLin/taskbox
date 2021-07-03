@@ -15,11 +15,23 @@ branches:
 install:
   - npm install
 
+before_script:
+  - yarn build-storybook
 
-script:
-  - npm run lint
-  - npm run test:unit
-  - npx chromatic --project-token=${CHROMATIC_PROJECT_TOKEN} --exit-zero-on-changes
+deploy:
+  provider: pages # Tell Travis we want to deploy to Github Pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN # Will take the environment variable you created on step 5
+  local_dir: storybook-static # The folder that needs to be deployed
+  repo: SoarLin/taskbox # Add your username/project_name here
+  target_branch: gh-pages # Tell Travis to deploy on the gh-pages branch
+  on:
+    branch: main # Tell Travis to trigger a deploy only when we push to master
+
+# script:
+#   - npm run lint
+#   - npm run test:unit
+#   - npx chromatic --project-token=${CHROMATIC_PROJECT_TOKEN} --exit-zero-on-changes
 # jobs:
 #   include:
 #     - name: 'ES Lint'
