@@ -1,5 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots PureInboxScreen Error 1`] = `
+<div>
+  <div
+    class="page lists-show"
+  >
+    <div
+      class="wrapper-message"
+    >
+      <span
+        class="icon-face-sad"
+      />
+      <div
+        class="title-message"
+      >
+        Oh no!
+      </div>
+      <div
+        class="subtitle-message"
+      >
+        Something went wrong
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots PureTaskList Default 1`] = `
 <div
   style="margin: 3em;"

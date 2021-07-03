@@ -8,6 +8,7 @@ export default createStore({
       { id: '3', title: 'Something else', state: 'TASK_INBOX' },
       { id: '4', title: 'Something again', state: 'TASK_INBOX' },
     ],
+    error: false
   },
   mutations: {
     ARCHIVE_TASK(state, id) {
