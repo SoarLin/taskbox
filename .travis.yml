@@ -1,0 +1,25 @@
+language: node_js
+node_js:
+  - 12
+
+cache:
+  directories:
+    - 'node_modules'
+
+branches:
+  only: main
+
+install:
+  - npm install
+
+jobs:
+  include:
+    - name: 'ES Lint'
+      script: npm run lint
+
+    - name: 'Unit test'
+      script: npm run test:unit
+
+    - name: 'Public to Chromatic'
+      if: (type = push OR head_repo != repo )
+      script: npx chromatic --project-token=${CHROMATIC_PROJECT_TOKEN}
