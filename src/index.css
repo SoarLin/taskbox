@@ -894,6 +894,9 @@
    line-height: 3rem;
    text-align: center;
  }
+ .list-item.TASK_INBOX .icon-star {
+   color: #eee;
+ }
  .list-item.TASK_PINNED .icon-star {
    color: #2cc5d2;
  }
