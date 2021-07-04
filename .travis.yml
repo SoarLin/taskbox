@@ -40,4 +40,4 @@ jobs:
 
     - name: 'Public to Chromatic'
       # if: (type = push OR head_repo != repo )
-      script: npx chromatic --project-token=${CHROMATIC_PROJECT_TOKEN} --exit-zero-on-changes
+      script: npx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN --exit-zero-on-changes
