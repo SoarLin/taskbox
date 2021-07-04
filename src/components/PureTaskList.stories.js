@@ -1,10 +1,10 @@
 import PureTaskList from './PureTaskList.vue';
-
+import { TASK_STATE } from '../utils/enums';
 import * as TaskStories from './Task.stories';
 
 export default {
   component: PureTaskList,
-  title: 'PureTaskList',
+  title: 'TaskList',
   decorators: [() => ({ template: '<div style="margin: 3em;"><story/></div>' })],
   argTypes: {
     onPinTask: {},
@@ -40,7 +40,7 @@ WithPinnedTasks.args = {
   // Inherited data coming from the Default story.
   tasks: [
     ...Default.args.tasks.slice(0, 5),
-    { id: '6', title: 'Task 6 (pinned)', state: 'TASK_PINNED' },
+    { id: '6', title: 'Task 6 (pinned)', state: TASK_STATE.PINNED },
   ],
 };
 

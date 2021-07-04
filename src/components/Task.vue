@@ -10,7 +10,7 @@
         :value="task.title"
         readonly
         placeholder="Input title"
-        style="background: red;"
+        style="text-overflow: ellipsis;"
       />
     </div>
     <div class="actions">
@@ -23,6 +23,7 @@
 
 <script>
 import { reactive, computed } from 'vue';
+import { TASK_STATE } from '../utils/enums';
 
 export default {
   name: 'Task',
@@ -40,14 +41,14 @@ export default {
     props = reactive(props);
     return {
       classes: computed(() => ({
-        'list-item TASK_INBOX': props.task.state === 'TASK_INBOX',
-        'list-item TASK_PINNED': props.task.state === 'TASK_PINNED',
-        'list-item TASK_ARCHIVED': props.task.state === 'TASK_ARCHIVED',
+        'list-item TASK_INBOX': props.task.state === TASK_STATE.INBOX,
+        'list-item TASK_PINNED': props.task.state === TASK_STATE.PINNED,
+        'list-item TASK_ARCHIVED': props.task.state === TASK_STATE.ARCHIVED,
       })),
       /**
        * Computed property for checking the state of the task
        */
-      isChecked: computed(() => props.task.state === 'TASK_ARCHIVED'),
+      isChecked: computed(() => props.task.state === TASK_STATE.ARCHIVED),
       /**
        * Event handler for archiving tasks
        */
