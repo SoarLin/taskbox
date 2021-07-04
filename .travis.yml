@@ -35,8 +35,8 @@ jobs:
     - name: 'ES Lint'
       script: npm run lint
 
-    - name: 'Unit test'
-      script: npm run test-u:unit
+    # - name: 'Unit test'
+    #   script: npm run test-u:unit
 
     - name: 'Public to Chromatic'
       # if: (type = push OR head_repo != repo )

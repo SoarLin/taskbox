@@ -27,7 +27,7 @@ export default {
   title: 'PureInboxScreen',
 };
 
-const Template = (args) => ({
+const Template = args => ({
   components: { PureInboxScreen },
   setup() {
     return { args };
@@ -36,6 +36,7 @@ const Template = (args) => ({
 });
 
 export const Default = Template.bind({});
+Default.args = { error: false };
 
 export const Error = Template.bind({});
 Error.args = { error: true };

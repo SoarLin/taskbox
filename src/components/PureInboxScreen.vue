@@ -19,8 +19,9 @@
 </template>
 
 <script>
+import TaskList from './TaskList';
 import { reactive } from 'vue';
-import TaskList from './TaskList.vue';
+import { useStore } from 'vuex';
 
 export default {
   name: 'PureInboxScreen',
@@ -29,8 +30,10 @@ export default {
     error: { type: Boolean, default: false },
   },
   setup(props) {
+    const store = useStore();
     props = reactive(props);
     return {
+      store
     };
   }
 };
