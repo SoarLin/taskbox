@@ -20,7 +20,6 @@
 
 <script>
 import TaskList from './TaskList';
-import { reactive } from 'vue';
 import { useStore } from 'vuex';
 
 export default {
@@ -29,9 +28,8 @@ export default {
   props: {
     error: { type: Boolean, default: false },
   },
-  setup(props) {
+  setup() {
     const store = useStore();
-    props = reactive(props);
     return {
       store
     };
