@@ -25,6 +25,9 @@ app.use(store);
 export default {
   component: PureInboxScreen,
   title: 'InboxScreen',
+  parameters: {
+    storyshots: { disable: true },
+  },
 };
 
 const Template = args => ({
@@ -36,7 +39,12 @@ const Template = args => ({
 });
 
 export const Default = Template.bind({});
-Default.args = { error: false };
+// Default.parameters = {
+//   storyshots: { disable: false },
+// };
 
 export const Error = Template.bind({});
+Error.parameters = {
+  storyshots: { disable: false },
+};
 Error.args = { error: true };

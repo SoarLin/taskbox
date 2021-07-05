@@ -13,8 +13,14 @@ branches:
 install:
   - npm install
 
-script:
-  - npm run build-storybook
+jobs:
+  include:
+    - name: 'ES Lint'
+      script: npm run lint
+    - name: 'Unit test'
+      script: npm run test:unit
+    - name: 'Build Storybook'
+      script: npm run build-storybook
 
 deploy:
   provider: pages # Tell Travis we want to deploy to Github Pages

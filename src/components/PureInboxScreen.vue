@@ -20,19 +20,11 @@
 
 <script>
 import TaskList from './TaskList';
-import { useStore } from 'vuex';
-
 export default {
   name: 'PureInboxScreen',
   components: { TaskList },
   props: {
     error: { type: Boolean, default: false },
   },
-  setup() {
-    const store = useStore();
-    return {
-      store
-    };
-  }
 };
 </script>
