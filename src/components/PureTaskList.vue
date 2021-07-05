@@ -29,6 +29,7 @@
 
 <script>
 import Task from './Task';
+import { TASK_STATE } from '../utils/enums';
 import { reactive, computed } from 'vue';
 
 export default {
@@ -46,8 +47,8 @@ export default {
       isEmpty: computed(() => props.tasks.length === 0),
       tasksInOrder: computed(() => {
         return [
-          ...props.tasks.filter(t => t.state === 'TASK_PINNED'),
-          ...props.tasks.filter(t => t.state !== 'TASK_PINNED'),
+          ...props.tasks.filter(t => t.state === TASK_STATE.PINNED),
+          ...props.tasks.filter(t => t.state !== TASK_STATE.PINNED),
         ]
       }),
       /**
