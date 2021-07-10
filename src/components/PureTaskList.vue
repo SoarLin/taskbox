@@ -51,15 +51,9 @@ export default {
           ...props.tasks.filter(t => t.state !== TASK_STATE.PINNED),
         ]
       }),
-      /**
-       * Event handler for archiving tasks
-       */
       onArchiveTask(taskId) {
         emit('archive-task', taskId);
       },
-      /**
-       * Event handler for pinning tasks
-       */
       onPinTask(taskId) {
         emit('pin-task', taskId);
       },

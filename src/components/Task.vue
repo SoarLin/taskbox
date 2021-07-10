@@ -45,19 +45,10 @@ export default {
         'list-item TASK_PINNED': props.task.state === TASK_STATE.PINNED,
         'list-item TASK_ARCHIVED': props.task.state === TASK_STATE.ARCHIVED,
       })),
-      /**
-       * Computed property for checking the state of the task
-       */
       isChecked: computed(() => props.task.state === TASK_STATE.ARCHIVED),
-      /**
-       * Event handler for archiving tasks
-       */
       archiveTask() {
         emit('archive-task', props.task.id);
       },
-      /**
-       * Event handler for pinning tasks
-       */
       pinTask() {
         emit('pin-task', props.task.id);
       },

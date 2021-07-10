@@ -39,9 +39,6 @@ const Template = args => ({
 });
 
 export const Default = Template.bind({});
-// Default.parameters = {
-//   storyshots: { disable: false },
-// };
 
 export const Error = Template.bind({});
 Error.parameters = {
