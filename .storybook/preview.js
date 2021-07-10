@@ -1,9 +1,5 @@
 import '../src/index.css';
 
-export const decorators = [
-  () => ({ template: '<div style="margin: 1em;"><story/></div>' })
-];
-
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
