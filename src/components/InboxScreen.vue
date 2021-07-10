@@ -13,10 +13,8 @@
     name: 'InboxScreen',
     components: { PureInboxScreen },
     setup() {
-      //👇 Creates a store instance
       const store = useStore();
 
-      //👇 Retrieves the error from the store's state
       const error = computed(() => store.state.error);
       return {
         error,

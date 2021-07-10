@@ -30,13 +30,5 @@ deploy:
 
 # script:
 #   - npm run lint
-#   # - npm run test-u:unit
+#   - npm run test-u:unit
 #   - npx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN --exit-zero-on-changes
-# jobs:
-#   include:
-#     - name: 'ES Lint'
-#       script: npm run lint
-
-#     - name: 'Public to Chromatic'
-#       if: (type = push OR head_repo != repo )
-#       script: npx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN --exit-zero-on-changes
