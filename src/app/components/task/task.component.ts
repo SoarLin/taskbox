@@ -20,6 +20,7 @@ export class TaskComponent implements OnInit {
 
   onPin(id: any): void {
     this.onPinTask.emit(id);
+    // console.log(`task id:${id} pined`);
   }
 
   onArchive(id: any): void {
