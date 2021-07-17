@@ -2,11 +2,11 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Task } from 'src/app/models/task.model';
 
 @Component({
-  selector: 'app-task-list',
-  templateUrl: './task-list.component.html',
-  styleUrls: ['./task-list.component.scss']
+  selector: 'app-pure-task-list',
+  templateUrl: './pure-task-list.component.html',
+  styleUrls: ['./pure-task-list.component.scss']
 })
-export class TaskListComponent implements OnInit {
+export class PureTaskListComponent implements OnInit {
   // @Input() tasks: Task[] = [];
   @Input() loading = false;
 
